@@ -1,0 +1,343 @@
+/* CSS by Owen van der Zwan */
+
+/* Imported Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Root Variables */
+:root {
+  --teal: #4CA7C0;
+  --purple: #484FB7;
+  --lavender: #6B8FE7;
+  --yellow: #E9BB57;
+  --pink: #D9526F;
+  --dark-gray: #1E1E1E;
+  --white: #ffffff;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: var(--dark-gray);
+  padding: 0;
+  max-width: 540px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: 'Kavoon', cursive;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+nav h2 {
+  font-family: 'Kavoon', cursive;
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+h4 {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 1.15em;
+}
+
+footer {
+    background-color: var(--purple);
+    margin: 0;
+    padding: 2em 2em;
+    color: var(--white);
+    border-top: 2px solid #ff0000;
+    border-bottom: 2px solid #87CEEB;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.footer-link {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer-link:hover {
+    color: var(--yellow);
+}
+
+.header-section {
+    background-color: var(--purple);
+    margin: 0;
+    padding: 2em;
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.menu-section {
+    background-color: var(--yellow);
+    margin: 0;
+    padding: 1.5em;
+    border: 2px solid var(--purple);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.menu-section::before {
+    content: "MENU";
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--dark-gray);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.menu-item {
+    background-color: var(--white);
+    color: var(--purple);
+    text-decoration: none;
+    padding: 1em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #f0f0f0;
+}
+
+.services-section {
+    background-color: var(--purple);
+    margin: 0;
+    padding: 1em;
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+
+.services-section h2 {
+    color: var(--white);
+}
+
+.services-section h3 {
+    color: var(--yellow);
+}
+
+.service-card {
+    background-color: var(--white);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h4 {
+    margin-bottom: 0.5em;
+    color: var(--purple);
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.why-choose-us-section {
+    background-color: var(--pink);
+    margin: 0;
+    padding: 1em;
+}
+
+.why-choose-us-section h2 {
+    color: var(--white);
+    margin-bottom: 0.5em;
+}
+
+.why-choose-us-section h3 {
+    color: var(--white);
+    
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.feature-box {
+    background-color: var(--white);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+}
+
+.teal-box {
+    background-color: var(--teal);
+}
+
+.lavender-box {
+    background-color: var(--lavender);
+}
+
+.yellow-box {
+    background-color: var(--yellow);
+}
+
+.white-box {
+    background-color: var(--white);
+}
+
+.pricing-section {
+    background-color: var(--purple);
+    margin: 0;
+    padding: 1em;
+}
+
+.pricing-section h2 {
+    color: var(--white);
+}
+
+.pricing-section h3 {
+    color: var(--yellow);
+    margin-bottom: 0.5em;
+}
+
+.pricing-table {
+    width: 60%;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    border: 1px solid var(--yellow);
+}
+
+.pricing-table thead {
+    background-color: var(--yellow);
+}
+
+.pricing-table th {
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    color: var(--dark-gray);
+    border: 1px solid var(--yellow);
+}
+
+.pricing-table td {
+    padding: 1em;
+    color: var(--dark-gray);
+    border: 1px solid var(--yellow);
+    text-align: left;
+}
+
+.pricing-table tbody tr {
+    background-color: var(--white);
+}
+
+.cta-section {
+    background-color: var(--pink);
+    margin: 0;
+    padding: 2em 1em;
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--white);
+    font-family: 'Kavoon', cursive;
+    margin-bottom: 0.5em;
+}
+
+.cta-section p {
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    background-color: var(--white);
+    color: var(--dark-gray);
+    padding: 1.5em 3em;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+    min-width: 400px;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
